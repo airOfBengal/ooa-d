@@ -1,0 +1,10 @@
+public class FindGuiterTester{
+    public static void main(String... args){
+        Inventory inventory = new Inventory();
+        initializeInventory(inventory);
+    }
+    
+    private static void initializeInventory(Inventory inventory){
+        inventory.addGuiter("V95693",1499.95,"Fender","Stratocastor","electric","Alder","Alder");
+    }
+}

@@ -1,0 +1,26 @@
+public class Inventory{
+    private List guiters;
+    
+    public Inventory(){
+        guiters = new LinkedList();
+    }
+    
+    public void addGuiter(String serialNumber,double price,String builder,String model,String type,String backWood,String topWood){
+        Guiter guiter = new Guiter(serialNumber,price,builder,model,type,backWood,topWood);
+        guiters.add(guiter);
+    }
+    
+    public Guiter getGuiter(String serialNumber){
+        for(Iterator i = guiters.iterator();i.hasNext();){
+            Guiter guiter = (Guiter)i.next();
+            if(guiter.getSerialNumber().equals(serialNumber)){
+                return guiter;
+            }
+        }
+        return null;
+    }
+    
+    public Guiter search(Guiter searchGuiter){
+        
+    }
+}
